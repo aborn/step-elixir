@@ -1,10 +1,12 @@
 ## hello word
-IO.puts "Hello world"
-
-strA = "abcd 中ef k中国kkk"
-strB = "abcdkkk 中在efabcccccc"
 
 defmodule StringUtils do
+  @moduledoc """
+  字符串处理的工具函数
+  Date:2015-08-30
+  Author:guobao.jiang
+  """
+  
   def diff(strA, strB) do
     #    IO.puts Enum.map(String.codepoints(strA), fn x -> x <> "1" end)
     #    IO.puts String.codepoints(strA) -- String.codepoints(strB)
@@ -47,9 +49,12 @@ defmodule StringUtils do
   end
 end
 
+strA = "abcd 中ef k中国kkk"
+strB = "abcdkkk 中在efabcccccc"
+
 StringUtils.diff(strA, strB)
 #IO.puts StringUtils.onlyEnglish("fsafsd")
 #IO.puts StringUtils.onlyEnglish("fsafsd中")
 IO.puts StringUtils.takePrefix("ab中国", "ab中")
-IO.gets "yes or no?"
+#IO.gets "yes or no?"
 
