@@ -51,4 +51,5 @@ StringUtils.diff(strA, strB)
 #IO.puts StringUtils.onlyEnglish("fsafsd")
 #IO.puts StringUtils.onlyEnglish("fsafsd中")
 IO.puts StringUtils.takePrefix("ab中国", "ab中")
+IO.gets "yes or no?"
 
