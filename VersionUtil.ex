@@ -99,10 +99,13 @@ defmodule VersionUtil do
 end
 
 
-## 下面为测试用例
+## 下面为测试判断版本号是否合法
 IO.puts VersionUtil.validate("1.02.09")
 IO.puts VersionUtil.validate("")
 IO.puts VersionUtil.validate("1.23s")
+IO.puts VersionUtil.valid?("1.23s")
+IO.puts VersionUtil.valid?("1.23.0")
+IO.puts VersionUtil.valid?("")
 
 ## 下面测试比较
 IO.puts VersionUtil.compare("1.1", "1.0.1")
