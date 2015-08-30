@@ -7,6 +7,17 @@ defmodule StringUtils do
   Author:guobao.jiang
   """
   
+  @doc """
+  判断字符串是否为空串
+  """
+  def isBlank(str) do
+    if (String.valid?(str)) do
+      Enum.all?(String.codepoints(str), fn(x) -> x === " " end)
+    else
+      :true
+    end
+  end
+  
   def diff(strA, strB) do
     #    IO.puts Enum.map(String.codepoints(strA), fn x -> x <> "1" end)
     #    IO.puts String.codepoints(strA) -- String.codepoints(strB)
@@ -26,7 +37,7 @@ defmodule StringUtils do
     end
   end
   
-  def maxString(strA, strB) do
+  defp maxString(strA, strB) do
     if(String.length(strA) > String.length(strB)) do
       strA
     else
@@ -34,7 +45,7 @@ defmodule StringUtils do
     end
   end
 
-  def minString(strA, strB) do
+  defp minString(strA, strB) do
     if(String.length(strA) < String.length(strB)) do
       strA
     else
@@ -52,7 +63,10 @@ end
 strA = "abcd 中ef k中国kkk"
 strB = "abcdkkk 中在efabcccccc"
 
+IO.puts "是否为空串："
+IO.puts StringUtils.isBlank(" f")
 StringUtils.diff(strA, strB)
+
 #IO.puts StringUtils.onlyEnglish("fsafsd")
 #IO.puts StringUtils.onlyEnglish("fsafsd中")
 IO.puts StringUtils.takePrefix("ab中国", "ab中")
