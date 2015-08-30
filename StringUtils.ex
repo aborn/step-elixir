@@ -1,5 +1,3 @@
-## hello word
-
 defmodule StringUtils do
   @moduledoc """
   字符串处理的工具函数
