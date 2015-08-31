@@ -19,11 +19,11 @@ defmodule EnvUtils do
           fn(x) -> String.contains?(x, ["qa", "beta", "product", "ppe"]) end)
         hd(envList)
       else
-        :beta      # 默认为beta环境
+        "beta"      # 默认为beta环境
       end
         # 读取文件失败时，默认为beta环境
         {:error, _} ->
-          :beta    # 默认为beta环境
+          "beta"    # 默认为beta环境
     end
   end
 
