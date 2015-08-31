@@ -9,6 +9,7 @@ defmodule VersionUtil do
   查询传入的版本号是否合法
   返回 :true 或 :false
   """
+  @spec validate(String.t) :: boolean
   def validate(version) do
     # 当不是字符串类型 或者 字符串为空 返回false
     if((not String.valid?(version)) or (version === "")) do
@@ -28,6 +29,7 @@ defmodule VersionUtil do
   @doc """
   与validate/1 的方法一样，只是实现不一样
   """
+  @spec valid?(String.t) :: boolean
   def valid?(version) do
     verList = asAtomList(version)
     Enum.reduce(verList, :true,
@@ -47,6 +49,7 @@ defmodule VersionUtil do
   返回  0 当versionA = versionB
   返回 -1 当versionA < versionB
   """
+  @spec compare(String.t, String.t) :: integer
   def compare(versionA, versionB) do
     if (validate(versionA) and validate(versionB) ) do
       vListA = asIntAtomList(versionA)

@@ -4,7 +4,7 @@ defmodule EnvUtils do
   """
 
   @doc """
-  获得当前的环境
+  获得当前的环境,返回字符串
   """
   @spec getCurrentEnv :: String.t
   def getCurrentEnv() do
