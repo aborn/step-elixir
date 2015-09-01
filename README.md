@@ -1,9 +1,15 @@
 # step-elixir
 learning elixir language, do some implementation use elixir language.
 
-# Author
+# compile and test
+```
+mix compile
+mix test
+```
+
+# author
 Aborn Jiang
 
-# Date
-2015-08-30
+# update
+2015-09-01
 
