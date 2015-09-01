@@ -1,10 +1,17 @@
 # step-elixir
-learning elixir language, do some implementation use elixir language.
+learning elixir language, do some implementation use elixir language.  
+use [ExDoc](https://github.com/elixir-lang/ex_doc) as project documentation.
 
-# compile and test
+# install and compile and test
 ```
+mix deps.get
 mix compile
 mix test
+```
+
+## generate docs
+```
+mix docs
 ```
 
 # author
