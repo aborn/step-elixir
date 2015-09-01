@@ -5,6 +5,7 @@ defmodule KV.Mixfile do
     [app: :step_elixir,
      version: "0.0.1",
      elixir: "~> 1.0",
+     source_url: "https://github.com/aborn/step-elixir",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -27,6 +28,7 @@ defmodule KV.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [{:earmark, "~> 0.1", only: :dev},
+     {:ex_doc, "~> 0.8", only: :dev}]
   end
 end
