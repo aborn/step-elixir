@@ -95,24 +95,4 @@ defmodule VersionUtil do
     Enum.map(verList, fn(x) -> String.to_integer(x) end)
   end
 
-  # 测试用的函数
-  def debug(version) do
-    asIntAtomList(version)
-  end
 end
-
-
-## 下面为测试判断版本号是否合法
-IO.puts VersionUtil.validate("1.02.09")
-IO.puts VersionUtil.validate("")
-IO.puts VersionUtil.validate("1.23s")
-IO.puts VersionUtil.valid?("1.23s")
-IO.puts VersionUtil.valid?("1.23.0")
-IO.puts VersionUtil.valid?("")
-
-## 下面测试比较
-IO.puts VersionUtil.compare("1.1", "1.0.1")
-IO.puts VersionUtil.compare("0.0.1", "0.1")
-IO.puts VersionUtil.compare("0.1.0", "0.1s")
-IO.puts VersionUtil.compare("0.1.0s", "0.1s")
-IO.puts VersionUtil.compare("0.1.s0", "0.1")
