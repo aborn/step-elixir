@@ -47,8 +47,3 @@ defmodule EnvUtils do
     env === "product"
   end
 end
-
-## 测试下当前的环境
-IO.puts EnvUtils.getCurrentEnv()
-IO.puts EnvUtils.isBetaEnv()
-IO.puts EnvUtils.isProductionEnv()
