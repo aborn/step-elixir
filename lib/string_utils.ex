@@ -51,22 +51,13 @@ defmodule StringUtils do
     end
   end
 
+  @doc """
+  去掉字符串的前缀
+  """
   def takePrefix(full, prefix) do
     base = byte_size(prefix)
     IO.puts base
     binary_part(full, base, byte_size(full) - base)
   end
 end
-
-strA = "abcd 中ef k中国kkk"
-strB = "abcdkkk 中在efabcccccc"
-
-IO.puts "是否为空串："
-IO.puts StringUtils.isBlank(" f")
-StringUtils.diff(strA, strB)
-
-#IO.puts StringUtils.onlyEnglish("fsafsd")
-#IO.puts StringUtils.onlyEnglish("fsafsd中")
-IO.puts StringUtils.takePrefix("ab中国", "ab中")
-#IO.gets "yes or no?"
 
