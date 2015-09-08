@@ -17,12 +17,19 @@ defmodule StringUtils do
   end
   
   def diff(strA, strB) do
-    #    IO.puts Enum.map(String.codepoints(strA), fn x -> x <> "1" end)
-    #    IO.puts String.codepoints(strA) -- String.codepoints(strB)
-    IO.puts "长字符串为:" <> maxString(strA, strB)
-    IO.puts "短字符串为:" <> minString(strA, strB)
-  end
+    minStr = minString(strA, strB);
+    minLen = String.length(minStr);
 
+    filterResult = Enum.filter(0..minLen, fn x ->
+      if (String.at(strA, x) == String.at(strB, x)) do
+        IO.puts x
+      end
+    end)
+ 
+    #Enum.filter(0..length(filterResult), fn x ->
+     # if (filterResult
+  end
+  
   @doc """
   判断是否全为英文字母
   :) 这是一个函数的注释
@@ -56,8 +63,8 @@ defmodule StringUtils do
   """
   def takePrefix(full, prefix) do
     base = byte_size(prefix)
-    IO.puts base
     binary_part(full, base, byte_size(full) - base)
   end
 end
 
+IO.puts StringUtils.diff("abc 中ff中国ffi", "abd 中gf")
