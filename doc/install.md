@@ -19,3 +19,7 @@ mix archive.install ./hex-0.9.0.ez
 Are you sure you want to install archive "./hex-0.9.0.ez"? [Yn] Y
 * creating /Users/aborn/.mix/archives/hex-0.9.0.ezx
 ```
+
+## 安装hex的mirror
+[hex的镜像](https://hex.pm/docs/mirrors)
+mix hex.config cdn_url https://s3-ap-southeast-1.amazonaws.com/s3-asia.hex.pm
