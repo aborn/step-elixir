@@ -23,3 +23,5 @@ Are you sure you want to install archive "./hex-0.9.0.ez"? [Yn] Y
 ## 安装hex的mirror
 [hex的镜像](https://hex.pm/docs/mirrors)
 mix hex.config cdn_url https://s3-ap-southeast-1.amazonaws.com/s3-asia.hex.pm
+mix hex.config cdn_url https://s3-eu-west-1.amazonaws.com/s3-eu.hex.pm
+mix hex.config cdn_url https://s3.amazonaws.com/s3.hex.pm

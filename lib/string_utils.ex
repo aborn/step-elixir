@@ -1,4 +1,4 @@
-defmodule StringUtils do
+defmodule StepElixir.StringUtils do
   @moduledoc """
   字符串处理的工具函数
   Date:2015-08-30
@@ -67,4 +67,4 @@ defmodule StringUtils do
   end
 end
 
-IO.puts StringUtils.diff("abc 中ff中国ffi", "abd 中gf")
+IO.puts StepElixir.StringUtils.diff("abc 中ff中国ffi", "abd 中gf")
