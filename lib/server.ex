@@ -12,7 +12,7 @@ defmodule StepElixir.Server do
       {receivedInfo, caller} ->
         case receivedInfo do
           ^name ->
-            send caller, "world"
+            send caller, receivedInfo <> ",world!"
           _ ->
             send caller, "unknown:" <> receivedInfo
         end
