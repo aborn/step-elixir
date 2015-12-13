@@ -1,4 +1,8 @@
 defmodule StepElixir.Client do
+  @moduledoc """
+  客户端调用
+  """
+  
   def init() do
     {:ok, pid} = StepElixir.Server.create_instance
     Process.register(pid, :hi)
