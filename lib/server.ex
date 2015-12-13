@@ -12,7 +12,7 @@ defmodule StepElixir.Server do
           _ ->
             send caller, "unknown:" <> receivedInfo
         end
-        hi(name)
     end
+    hi(name)
   end
 end
