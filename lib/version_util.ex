@@ -1,8 +1,6 @@
 defmodule VersionUtil do
   @moduledoc """
-  MAPI 版本号验证和比较的module
-  Date: 2015-08-30
-  Author: guobao.jiang
+  版本比较工具module
   """
 
   @doc """

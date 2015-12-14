@@ -1,8 +1,6 @@
 defmodule StepElixir.StringUtils do
   @moduledoc """
   字符串处理的工具函数
-  Date:2015-08-30
-  Author:guobao.jiang
   """
   
   @doc """
@@ -25,9 +23,9 @@ defmodule StepElixir.StringUtils do
         IO.puts x
       end
     end)
- 
+    
     #Enum.filter(0..length(filterResult), fn x ->
-     # if (filterResult
+    # if (filterResult
   end
   
   @doc """
