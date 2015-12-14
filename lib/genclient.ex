@@ -14,7 +14,9 @@ defmodule StepElixir.GenClient do
   def say(msg) do
     case Process.whereis(@servername) do
       x when is_nil x ->
-        init()
+        {:ok, pid} = init()
+        IO.puts "初始化成功:#{inspect pid}"
+      _ ->     # do nothing
     end
     reply = GenServer.call(@servername, {:hello, msg})
     clientpid = self()
