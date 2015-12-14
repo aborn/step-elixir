@@ -6,6 +6,7 @@ defmodule StepElixir.Mixfile do
      version: "0.0.1",
      elixir: "~> 1.0",
      source_url: "https://github.com/aborn/step-elixir",
+     homepage_url: "https://github.com/aborn/step-elixir",
      name: "step-elixir",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
