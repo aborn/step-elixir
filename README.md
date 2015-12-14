@@ -16,7 +16,7 @@ mix docs
 ```
 
 ## docs
-http://step-elixir.aborn.me/overview.html
+http://step-elixir.aborn.me/index.html
 
 # author
 Aborn Jiang
