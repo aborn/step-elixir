@@ -1,4 +1,5 @@
-defmodule StringUtilsTest do
+defmodule StepElixir.StringUtilsTest do
+  alias StepElixir.StringUtils
   use ExUnit.Case, async: true
 
   test "test takePrefix" do
