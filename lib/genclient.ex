@@ -19,6 +19,7 @@ defmodule StepElixir.GenClient do
     reply = GenServer.call(@servername, {:hello, msg})
     clientpid = self()
     IO.puts "clientpid = #{inspect clientpid} reply:" <> reply
+    IO.puts "" <> GenServer.call(@servername, {:state})
   end
   
 end
