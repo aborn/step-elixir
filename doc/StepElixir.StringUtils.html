@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-        <title>VersionUtil – step-elixir v0.0.1</title>
+        <title>StepElixir.StringUtils – step-elixir v0.0.1</title>
       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc">
@@ -74,11 +74,11 @@
         <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas">
           <span class="glyphicon glyphicon-menu-hamburger"></span>
         </button>
-        step-elixir v0.0.1 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="VersionUtil.html#content">VersionUtil</a>
+        step-elixir v0.0.1 &rarr; <a href="overview.html">Overview</a> &rarr; StepElixir &rarr; <a href="StepElixir.StringUtils.html#content">StringUtils</a>
       </div>
 
       <h1>
-        VersionUtil
+        StepElixir.StringUtils
         
       </h1>
 
@@ -96,15 +96,15 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>MAPI 版本号验证和比较的module
-Date: 2015-08-30
-Author: guobao.jiang</p>
+          <p>字符串处理的工具函数
+Date:2015-08-30
+Author:guobao.jiang</p>
 
         </section>
       
 
       
-        <a href="https://github.com/aborn/step-elixir/blob/master/lib/version_util.ex#L2" class="view_source">Source</a>
+        <a href="https://github.com/aborn/step-elixir/blob/master/lib/string_utils.ex#L2" class="view_source">Source</a>
       
 
       
@@ -112,22 +112,23 @@ Author: guobao.jiang</p>
           <h1>Summary</h1>
           <table class="summary">
             <tr>
-  <td class="summary_signature"><a href="#compare/2">compare(versionA, versionB)</a></td>
-  <td class="summary_synopsis"><p>判断版本号的大小
-返回  1 当versionA &gt; versionB
-返回  0 当versionA = versionB
-返回 -1 当versionA &lt; versionB</p>
+  <td class="summary_signature"><a href="#diff/2">diff(strA, strB)</a></td>
+  <td class="summary_synopsis"></td>
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#isBlank/1">isBlank(str)</a></td>
+  <td class="summary_synopsis"><p>判断字符串是否为空串</p>
 </td>
 </tr>
 <tr>
-  <td class="summary_signature"><a href="#valid?/1">valid?(version)</a></td>
-  <td class="summary_synopsis"><p>与validate/1 的方法一样，只是实现不一样</p>
+  <td class="summary_signature"><a href="#onlyEnglish/1">onlyEnglish(str)</a></td>
+  <td class="summary_synopsis"><p>判断是否全为英文字母
+:) 这是一个函数的注释</p>
 </td>
 </tr>
 <tr>
-  <td class="summary_signature"><a href="#validate/1">validate(version)</a></td>
-  <td class="summary_synopsis"><p>查询传入的版本号是否合法
-返回 :true 或 :false</p>
+  <td class="summary_signature"><a href="#takePrefix/2">takePrefix(full, prefix)</a></td>
+  <td class="summary_synopsis"><p>去掉字符串的前缀</p>
 </td>
 </tr>
 
@@ -141,82 +142,75 @@ Author: guobao.jiang</p>
         <section id="functions_details" class="details_list">
           <h1>Functions</h1>
           <section class="detail">
-  <div class="detail_header" id="compare/2">
-    <span class="signature"><strong>compare(versionA, versionB)</strong></span>
+  <div class="detail_header" id="diff/2">
+    <span class="signature"><strong>diff(strA, strB)</strong></span>
     <div class="detail_header_links">
       <span class="detail_type">(function)</span>
-      <a href="#compare/2" class="detail_link" title="Link to this function">#</a>
+      <a href="#diff/2" class="detail_link" title="Link to this function">#</a>
       <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
     </div>
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>compare(<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: integer</li>
-      
-    </ul>
-  
   <section class="docstring">
-    <p>判断版本号的大小
-返回  1 当versionA &gt; versionB
-返回  0 当versionA = versionB
-返回 -1 当versionA &lt; versionB</p>
-
+    
   </section>
   
-    <a href="https://github.com/aborn/step-elixir/blob/master/lib/version_util.ex#L46" class="view_source">Source</a>
+    <a href="https://github.com/aborn/step-elixir/blob/master/lib/string_utils.ex#L19" class="view_source">Source</a>
   
 </section>
 <section class="detail">
-  <div class="detail_header" id="valid?/1">
-    <span class="signature"><strong>valid?(version)</strong></span>
+  <div class="detail_header" id="isBlank/1">
+    <span class="signature"><strong>isBlank(str)</strong></span>
     <div class="detail_header_links">
       <span class="detail_type">(function)</span>
-      <a href="#valid?/1" class="detail_link" title="Link to this function">#</a>
+      <a href="#isBlank/1" class="detail_link" title="Link to this function">#</a>
       <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
     </div>
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>valid?(<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: boolean</li>
-      
-    </ul>
-  
   <section class="docstring">
-    <p>与validate/1 的方法一样，只是实现不一样</p>
+    <p>判断字符串是否为空串</p>
 
   </section>
   
-    <a href="https://github.com/aborn/step-elixir/blob/master/lib/version_util.ex#L29" class="view_source">Source</a>
+    <a href="https://github.com/aborn/step-elixir/blob/master/lib/string_utils.ex#L8" class="view_source">Source</a>
   
 </section>
 <section class="detail">
-  <div class="detail_header" id="validate/1">
-    <span class="signature"><strong>validate(version)</strong></span>
+  <div class="detail_header" id="onlyEnglish/1">
+    <span class="signature"><strong>onlyEnglish(str)</strong></span>
     <div class="detail_header_links">
       <span class="detail_type">(function)</span>
-      <a href="#validate/1" class="detail_link" title="Link to this function">#</a>
+      <a href="#onlyEnglish/1" class="detail_link" title="Link to this function">#</a>
       <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
     </div>
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>validate(<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: boolean</li>
-      
-    </ul>
-  
   <section class="docstring">
-    <p>查询传入的版本号是否合法
-返回 :true 或 :false</p>
+    <p>判断是否全为英文字母
+:) 这是一个函数的注释</p>
 
   </section>
   
-    <a href="https://github.com/aborn/step-elixir/blob/master/lib/version_util.ex#L8" class="view_source">Source</a>
+    <a href="https://github.com/aborn/step-elixir/blob/master/lib/string_utils.ex#L33" class="view_source">Source</a>
+  
+</section>
+<section class="detail">
+  <div class="detail_header" id="takePrefix/2">
+    <span class="signature"><strong>takePrefix(full, prefix)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#takePrefix/2" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <section class="docstring">
+    <p>去掉字符串的前缀</p>
+
+  </section>
+  
+    <a href="https://github.com/aborn/step-elixir/blob/master/lib/string_utils.ex#L61" class="view_source">Source</a>
   
 </section>
 

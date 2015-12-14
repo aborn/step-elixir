@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-        <title>VersionUtil – step-elixir v0.0.1</title>
+        <title>StepElixir.Server – step-elixir v0.0.1</title>
       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc">
@@ -74,11 +74,11 @@
         <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas">
           <span class="glyphicon glyphicon-menu-hamburger"></span>
         </button>
-        step-elixir v0.0.1 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="VersionUtil.html#content">VersionUtil</a>
+        step-elixir v0.0.1 &rarr; <a href="overview.html">Overview</a> &rarr; StepElixir &rarr; <a href="StepElixir.Server.html#content">Server</a>
       </div>
 
       <h1>
-        VersionUtil
+        StepElixir.Server
         
       </h1>
 
@@ -96,15 +96,13 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>MAPI 版本号验证和比较的module
-Date: 2015-08-30
-Author: guobao.jiang</p>
+          <p>服务端处理发过来的消息</p>
 
         </section>
       
 
       
-        <a href="https://github.com/aborn/step-elixir/blob/master/lib/version_util.ex#L2" class="view_source">Source</a>
+        <a href="https://github.com/aborn/step-elixir/blob/master/lib/server.ex#L2" class="view_source">Source</a>
       
 
       
@@ -112,23 +110,12 @@ Author: guobao.jiang</p>
           <h1>Summary</h1>
           <table class="summary">
             <tr>
-  <td class="summary_signature"><a href="#compare/2">compare(versionA, versionB)</a></td>
-  <td class="summary_synopsis"><p>判断版本号的大小
-返回  1 当versionA &gt; versionB
-返回  0 当versionA = versionB
-返回 -1 当versionA &lt; versionB</p>
-</td>
+  <td class="summary_signature"><a href="#create_instance/0">create_instance()</a></td>
+  <td class="summary_synopsis"></td>
 </tr>
 <tr>
-  <td class="summary_signature"><a href="#valid?/1">valid?(version)</a></td>
-  <td class="summary_synopsis"><p>与validate/1 的方法一样，只是实现不一样</p>
-</td>
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#validate/1">validate(version)</a></td>
-  <td class="summary_synopsis"><p>查询传入的版本号是否合法
-返回 :true 或 :false</p>
-</td>
+  <td class="summary_signature"><a href="#hi/1">hi(name)</a></td>
+  <td class="summary_synopsis"></td>
 </tr>
 
           </table>
@@ -141,82 +128,37 @@ Author: guobao.jiang</p>
         <section id="functions_details" class="details_list">
           <h1>Functions</h1>
           <section class="detail">
-  <div class="detail_header" id="compare/2">
-    <span class="signature"><strong>compare(versionA, versionB)</strong></span>
+  <div class="detail_header" id="create_instance/0">
+    <span class="signature"><strong>create_instance()</strong></span>
     <div class="detail_header_links">
       <span class="detail_type">(function)</span>
-      <a href="#compare/2" class="detail_link" title="Link to this function">#</a>
+      <a href="#create_instance/0" class="detail_link" title="Link to this function">#</a>
       <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
     </div>
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>compare(<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: integer</li>
-      
-    </ul>
-  
   <section class="docstring">
-    <p>判断版本号的大小
-返回  1 当versionA &gt; versionB
-返回  0 当versionA = versionB
-返回 -1 当versionA &lt; versionB</p>
-
+    
   </section>
   
-    <a href="https://github.com/aborn/step-elixir/blob/master/lib/version_util.ex#L46" class="view_source">Source</a>
+    <a href="https://github.com/aborn/step-elixir/blob/master/lib/server.ex#L6" class="view_source">Source</a>
   
 </section>
 <section class="detail">
-  <div class="detail_header" id="valid?/1">
-    <span class="signature"><strong>valid?(version)</strong></span>
+  <div class="detail_header" id="hi/1">
+    <span class="signature"><strong>hi(name)</strong></span>
     <div class="detail_header_links">
       <span class="detail_type">(function)</span>
-      <a href="#valid?/1" class="detail_link" title="Link to this function">#</a>
+      <a href="#hi/1" class="detail_link" title="Link to this function">#</a>
       <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
     </div>
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>valid?(<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: boolean</li>
-      
-    </ul>
-  
   <section class="docstring">
-    <p>与validate/1 的方法一样，只是实现不一样</p>
-
+    
   </section>
   
-    <a href="https://github.com/aborn/step-elixir/blob/master/lib/version_util.ex#L29" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="validate/1">
-    <span class="signature"><strong>validate(version)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#validate/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
-  </div>
-  
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>validate(<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: boolean</li>
-      
-    </ul>
-  
-  <section class="docstring">
-    <p>查询传入的版本号是否合法
-返回 :true 或 :false</p>
-
-  </section>
-  
-    <a href="https://github.com/aborn/step-elixir/blob/master/lib/version_util.ex#L8" class="view_source">Source</a>
+    <a href="https://github.com/aborn/step-elixir/blob/master/lib/server.ex#L10" class="view_source">Source</a>
   
 </section>
 

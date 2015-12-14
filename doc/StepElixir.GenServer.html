@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-        <title>StringUtils – step-elixir v0.0.1</title>
+        <title>StepElixir.GenServer – step-elixir v0.0.1</title>
       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc">
@@ -74,11 +74,11 @@
         <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas">
           <span class="glyphicon glyphicon-menu-hamburger"></span>
         </button>
-        step-elixir v0.0.1 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="StringUtils.html#content">StringUtils</a>
+        step-elixir v0.0.1 &rarr; <a href="overview.html">Overview</a> &rarr; StepElixir &rarr; <a href="StepElixir.GenServer.html#content">GenServer</a>
       </div>
 
       <h1>
-        StringUtils
+        StepElixir.GenServer
         
       </h1>
 
@@ -96,15 +96,13 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>字符串处理的工具函数
-Date:2015-08-30
-Author:guobao.jiang</p>
+          <p>GenServer demo</p>
 
         </section>
       
 
       
-        <a href="https://github.com/aborn/step-elixir/blob/master/lib/string_utils.ex#L1" class="view_source">Source</a>
+        <a href="https://github.com/aborn/step-elixir/blob/master/lib/genserver.ex#L2" class="view_source">Source</a>
       
 
       
@@ -112,23 +110,13 @@ Author:guobao.jiang</p>
           <h1>Summary</h1>
           <table class="summary">
             <tr>
-  <td class="summary_signature"><a href="#diff/2">diff(strA, strB)</a></td>
+  <td class="summary_signature"><a href="#handle_cast/1">handle_cast(atom)</a></td>
   <td class="summary_synopsis"></td>
 </tr>
 <tr>
-  <td class="summary_signature"><a href="#isBlank/1">isBlank(str)</a></td>
-  <td class="summary_synopsis"><p>判断字符串是否为空串</p>
+  <td class="summary_signature"><a href="#init/1">init(args)</a></td>
+  <td class="summary_synopsis"><p>初始化的callback</p>
 </td>
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#onlyEnglish/1">onlyEnglish(str)</a></td>
-  <td class="summary_synopsis"><p>判断是否全为英文字母
-:) 这是一个函数的注释</p>
-</td>
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#takePrefix/2">takePrefix(full, prefix)</a></td>
-  <td class="summary_synopsis"></td>
 </tr>
 
           </table>
@@ -141,11 +129,11 @@ Author:guobao.jiang</p>
         <section id="functions_details" class="details_list">
           <h1>Functions</h1>
           <section class="detail">
-  <div class="detail_header" id="diff/2">
-    <span class="signature"><strong>diff(strA, strB)</strong></span>
+  <div class="detail_header" id="handle_cast/1">
+    <span class="signature"><strong>handle_cast(atom)</strong></span>
     <div class="detail_header_links">
       <span class="detail_type">(function)</span>
-      <a href="#diff/2" class="detail_link" title="Link to this function">#</a>
+      <a href="#handle_cast/1" class="detail_link" title="Link to this function">#</a>
       <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
     </div>
   </div>
@@ -154,61 +142,25 @@ Author:guobao.jiang</p>
     
   </section>
   
-    <a href="https://github.com/aborn/step-elixir/blob/master/lib/string_utils.ex#L19" class="view_source">Source</a>
+    <a href="https://github.com/aborn/step-elixir/blob/master/lib/genserver.ex#L30" class="view_source">Source</a>
   
 </section>
 <section class="detail">
-  <div class="detail_header" id="isBlank/1">
-    <span class="signature"><strong>isBlank(str)</strong></span>
+  <div class="detail_header" id="init/1">
+    <span class="signature"><strong>init(args)</strong></span>
     <div class="detail_header_links">
       <span class="detail_type">(function)</span>
-      <a href="#isBlank/1" class="detail_link" title="Link to this function">#</a>
+      <a href="#init/1" class="detail_link" title="Link to this function">#</a>
       <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
     </div>
   </div>
   
   <section class="docstring">
-    <p>判断字符串是否为空串</p>
+    <p>初始化的callback</p>
 
   </section>
   
-    <a href="https://github.com/aborn/step-elixir/blob/master/lib/string_utils.ex#L11" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="onlyEnglish/1">
-    <span class="signature"><strong>onlyEnglish(str)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#onlyEnglish/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
-  </div>
-  
-  <section class="docstring">
-    <p>判断是否全为英文字母
-:) 这是一个函数的注释</p>
-
-  </section>
-  
-    <a href="https://github.com/aborn/step-elixir/blob/master/lib/string_utils.ex#L30" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="takePrefix/2">
-    <span class="signature"><strong>takePrefix(full, prefix)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#takePrefix/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-  
-    <a href="https://github.com/aborn/step-elixir/blob/master/lib/string_utils.ex#L54" class="view_source">Source</a>
+    <a href="https://github.com/aborn/step-elixir/blob/master/lib/genserver.ex#L6" class="view_source">Source</a>
   
 </section>
 
