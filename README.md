@@ -15,9 +15,12 @@ mix test
 mix docs
 ```
 
+## docs
+http://step-elixir.aborn.me/overview.html
+
 # author
 Aborn Jiang
 
 # update
-2015-12-12
+2015-12-14
 
