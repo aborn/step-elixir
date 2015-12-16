@@ -1,4 +1,4 @@
-defmodule EnvUtils do
+defmodule StepElixir.EnvUtils do
   @moduledoc """
   获得开发环境及与开发环境有关的module
   """

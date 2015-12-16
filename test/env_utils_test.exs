@@ -1,4 +1,5 @@
 defmodule EnvUtilsTest do
+  alias StepElixir.EnvUtils
   use ExUnit.Case, async: true
 
   test "test isBetaEnv" do
