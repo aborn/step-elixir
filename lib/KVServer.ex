@@ -7,7 +7,7 @@ defmodule KVServer do
 
     children = [
       supervisor(Task.Supervisor, [[name: KVServer.TaskSupervisor]]),
-      worker(Task, [KVServer, :accept, [4040]])
+      worker(Task, [KVServer, :accept, [4000]])
     ]
 
     opts = [strategy: :one_for_one, name: KVServer.Supervisor]
@@ -19,7 +19,7 @@ defmodule KVServer do
   """
   def accept(port) do
     {:ok, socket} = :gen_tcp.listen(port,
-                      [:binary, packet: :line, active: false, reuseaddr: true])
+                                    [:binary, packet: :line, active: false, reuseaddr: true])
     IO.puts "Accepting connections on port #{port}"
     loop_acceptor(socket)
   end
@@ -40,8 +40,15 @@ defmodule KVServer do
   end
 
   defp read_line(socket) do
-    {:ok, data} = :gen_tcp.recv(socket, 0)
-    data
+    case :gen_tcp.recv(socket, 0) do
+      {:ok, data} ->
+        data
+      {:error, :close} ->
+        IO.puts "client closed connection!"
+        ""
+      _ ->
+        nil # do nothing
+    end
   end
 
   defp write_line(line, socket) do

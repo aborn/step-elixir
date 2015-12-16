@@ -17,7 +17,8 @@ defmodule StepElixir.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger],
+    mod: {KVServer, []}]
   end
 
   # Dependencies can be Hex packages:
