@@ -1,4 +1,7 @@
 defmodule SocketDemoServer do
+  @moduledoc """
+  用来演示socket的链接
+  """
   use Application
 
   @doc false
@@ -35,7 +38,7 @@ defmodule SocketDemoServer do
   defp serve(socket) do
     case read_line(socket) do
       {:ok, data} ->
-        IO.puts "I receive msg:#{data} from socket #{inspect socket}"
+        IO.puts "收到客户端消息:#{data} from socket #{inspect socket}"
         write_line(data, socket)
         serve(socket)
       {:error, :closed} ->
