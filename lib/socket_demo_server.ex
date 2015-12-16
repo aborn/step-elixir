@@ -1,4 +1,4 @@
-defmodule KVServer do
+defmodule SocketDemoServer do
   use Application
 
   @doc false
@@ -6,11 +6,11 @@ defmodule KVServer do
     import Supervisor.Spec
 
     children = [
-      supervisor(Task.Supervisor, [[name: KVServer.TaskSupervisor]]),
-      worker(Task, [KVServer, :accept, [4000]])
+      supervisor(Task.Supervisor, [[name: SocketDemoServer.TaskSupervisor]]),
+      worker(Task, [SocketDemoServer, :accept, [4000]])
     ]
 
-    opts = [strategy: :one_for_one, name: KVServer.Supervisor]
+    opts = [strategy: :one_for_one, name: SocketDemoServer.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -26,7 +26,7 @@ defmodule KVServer do
 
   defp loop_acceptor(socket) do
     {:ok, client} = :gen_tcp.accept(socket)
-    {:ok, pid} = Task.Supervisor.start_child(KVServer.TaskSupervisor, fn -> serve(client) end)
+    {:ok, pid} = Task.Supervisor.start_child(SocketDemoServer.TaskSupervisor, fn -> serve(client) end)
     IO.puts "pid=#{inspect pid} created!"
     :ok = :gen_tcp.controlling_process(client, pid)
     loop_acceptor(socket)
