@@ -27,31 +27,32 @@ defmodule KVServer do
   defp loop_acceptor(socket) do
     {:ok, client} = :gen_tcp.accept(socket)
     {:ok, pid} = Task.Supervisor.start_child(KVServer.TaskSupervisor, fn -> serve(client) end)
+    IO.puts "pid=#{inspect pid} created!"
     :ok = :gen_tcp.controlling_process(client, pid)
     loop_acceptor(socket)
   end
 
   defp serve(socket) do
-    socket
-    |> read_line()
-    |> write_line(socket)
-
-    serve(socket)
-  end
-
-  defp read_line(socket) do
-    case :gen_tcp.recv(socket, 0) do
+    case read_line(socket) do
       {:ok, data} ->
-        data
-      {:error, :close} ->
-        IO.puts "client closed connection!"
-        ""
+        IO.puts "I receive msg:#{data} from socket #{inspect socket}"
+        write_line(data, socket)
+        serve(socket)
+      {:error, :closed} ->
+        IO.puts "client close connection!"
+        :gen_tcp.close(socket)
       _ ->
-        nil # do nothing
+        raise "unknown error exception!"
     end
   end
 
+  defp read_line(socket) do
+    :gen_tcp.recv(socket, 0)
+  end
+
   defp write_line(line, socket) do
-    :gen_tcp.send(socket, line)
+    unless is_nil line do
+      :gen_tcp.send(socket, line)
+    end
   end
 end
