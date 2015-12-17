@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ProcessDemo – step-elixir v0.0.1</title>
+    <title>Blank – step-elixir v0.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.1">
     <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
     <script src="dist/sidebar_items.js"></script>
   </head>
-  <body data-type="modules">
+  <body data-type="protocols">
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -63,10 +63,12 @@
 
       <h1>
         <small class="visible-xs">step-elixir v0.0.1</small>
-        ProcessDemo
+        Blank
+        
+          <small>protocol</small>
         
         
-          <a href="https://github.com/aborn/step-elixir/blob/master/lib/process_demo.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/aborn/step-elixir/blob/master/lib/protocol.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -83,6 +85,19 @@
             Summary
           </h1>
           
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:t/0">t()</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-functions summary">
@@ -91,8 +106,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#do_send/0">do_send()</a>
+    <a href="#blank?/1">blank?(data)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Returns true if data is considered blank/empty</p>
+</div>
   
 </div>
 
@@ -107,6 +125,22 @@
       
 
       
+        <section id="types" class="types details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div id="t:t/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:t/0">t</a> :: term</code></pre>
+  
+</div>
+
+          </div>
+        </section>
+      
 
       
         <section id="functions" class="details-list">
@@ -116,21 +150,22 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="do_send/0">
+          <div class="detail" id="blank?/1">
   <div class="detail-header">
-    <a href="#do_send/0" class="detail-link" title="Link to this function">
+    <a href="#blank?/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">do_send()</span>
+    <span class="signature">blank?(data)</span>
       
-      <a href="https://github.com/aborn/step-elixir/blob/master/lib/process_demo.ex#L2" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/aborn/step-elixir/blob/master/lib/protocol.ex#L3" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    
+    <p>Returns true if data is considered blank/empty</p>
+
   </section>
 </div>
 
