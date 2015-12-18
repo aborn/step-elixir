@@ -1,4 +1,7 @@
 defmodule StepElixir.DemoEnum do
+  @moduledoc """
+  列表类型的过虑
+  """
 
   def map(arg \\ [1, 2, 3]) do
     Enum.map(arg, fn x ->

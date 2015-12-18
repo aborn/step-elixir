@@ -1,6 +1,6 @@
 defmodule SocketDemoServer do
   @moduledoc """
-  用来演示socket的链接
+  用来演示socket链接的server端
   """
   use Application
 
