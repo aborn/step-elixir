@@ -25,6 +25,35 @@ Are you sure you want to install archive "./hex-0.9.0.ez"? [Yn] Y
 mix hex.info
 ```
 
+## publish hex
+0. 先注册：mix hex.user register
+1. 授权: mix hex.user auth
+2. 发布: mix hex.publish
+3. 发布doc: mix hex.docs
+
+```shell
+➜  eeb git:(master) mix hex.publish
+** (Mix) No authorized user found. Run 'mix hex.user auth'
+➜  eeb git:(master) mix hex.user auth
+Username: aborn
+Password:
+Generating API key...
+➜  eeb git:(master) mix hex.publish
+...
+Before publishing, please read Hex Code of Conduct: https://hex.pm/docs/codeofconduct
+Proceed? [Yn] Y
+[#########################] 100%
+Published at https://hex.pm/packages/eeb/0.1.0
+Don't forget to upload your documentation with `mix hex.docs`
+➜  eeb git:(master)
+➜  eeb git:(master) mix hex.docs
+Docs successfully generated.
+View them at "doc/index.html".
+[#########################] 100%
+Published docs for eeb 0.1.0
+Hosted at http://hexdocs.pm/eeb/0.1.0/
+```
+
 ## 安装hex的mirror
 [hex的镜像](https://hex.pm/docs/mirrors)
 mix hex.config cdn_url https://s3-ap-southeast-1.amazonaws.com/s3-asia.hex.pm
