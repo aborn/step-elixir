@@ -60,5 +60,16 @@ mix hex.config cdn_url https://s3-ap-southeast-1.amazonaws.com/s3-asia.hex.pm
 mix hex.config cdn_url https://s3-eu-west-1.amazonaws.com/s3-eu.hex.pm
 mix hex.config cdn_url https://s3.amazonaws.com/s3.hex.pm
 
+## 编译出错
+编译项目的时候出现以下错误：
+```
+Crash dump is being written to: erl_crash.dump...*** stack smashing detected ***: /usr/lib/erlang/erts-7.2/bin/beam terminated
+```
+查看下erl_crash.dump（这个文件可能不在当前目录，在deps/查找）文件，发现以下提示：
+```
+Slogan: eheap_alloc: Cannot allocate 147852528 bytes of memory (of type "old_heap").
+```
+内存不够！！
+
 ## 启动
 mix run --no-halt
