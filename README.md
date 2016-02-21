@@ -18,6 +18,9 @@ mix docs
 ## docs
 http://step-elixir.aborn.me/index.html
 
+# observer
+:observer.start()
+
 # author
 Aborn Jiang
 
